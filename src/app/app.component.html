@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Worst games</h1>
+
+    <div class="explanation">
+      Select the video game, that is the worst in your
+      <span class="subjective">subjective</span> opinion
+    </div>
+
+    <div class="games">
+      <div class="game first">
+        <h3 [hidden]="!isSelected(0)">Chosen !</h3>
+        <img
+          class="image brawl"
+          src="../assets/images/brawl-stars.jpg"
+          alt=""
+        />
+        <br />
+        <button
+          class="brawl"  
+          [disabled]="anySelected() && !isSelected(0)"
+          (click)="onVoteClick(0)"
+        >
+          {{ getButtonText(0) }}
+        </button>
+      </div>
+
+      <div class="game second">
+        <h3 [hidden]="!isSelected(1)">Chosen !</h3>
+        <img
+          class="image dota"
+          src="../assets/images/8a8b50da2bc4afa933718061fe291520.jpg"
+          alt=""
+        />
+        <br />
+        <button
+          class="dota"
+          [disabled]="anySelected() && !isSelected(1)"
+          (click)="onVoteClick(1)"
+        >
+          {{ getButtonText(1) }}
+        </button>
+      </div>
+
+      <div class="game third">
+        <h3 [hidden]="!isSelected(2)">Chosen !</h3>
+        <img
+          class="image league"
+          src="../assets/images/87a1ef48e43b8cf114017e3ad51b801951b20fcf.jpg"
+          alt=""
+        />
+        <br />
+        <button
+          class="league"
+          [disabled]="anySelected() && !isSelected(2)"
+          (click)="onVoteClick(2)"
+        >
+          {{ getButtonText(2) }}
+        </button>
+      </div>
+
+      <div class="game forth">
+        <h3 [hidden]="!isSelected(3)">Chosen !</h3>
+        <img
+          class="image hots"
+          src="../assets/images/5a3f53145dc2c0d15171161ccd8f9b8ba72eefa3.png"
+          alt=""
+        />
+        <br />
+        <button
+          class="hots"
+          [disabled]="anySelected() && !isSelected(3)"
+          (click)="onVoteClick(3)"
+        >
+          {{ getButtonText(3) }}
+        </button>
+      </div>
+
+      <div class="game fifth">
+        <h3 [hidden]="!isSelected(4)">Chosen !</h3>
+        <img class="image apex" src="../assets/images/mark.jpg" alt="" />
+        <br />
+        <button
+          class="apex"
+          [disabled]="anySelected() && !isSelected(4)"
+          (click)="onVoteClick(4)"
+        >
+          {{ getButtonText(4) }}
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
